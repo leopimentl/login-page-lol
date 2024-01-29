@@ -1,0 +1,330 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+:root {
+    --confirm-login-color-inside: #F9F9F2;
+    --confirm-login-color-hover: #BC252A;
+    --whitesmoke: #F9F9F9;
+    --input-color: #EDEDED;
+    --input-color-hover: #E1E1E1;
+    --label-color: #676767;
+    --grey-forte: #A7A7A7;
+    --tt-color: #0A0A0A;
+    --tt-color-hover: #000000;
+    --black: #000000;
+    --blue: #1877F2;
+    --blue-border: #1771E6;
+    --green-border: #0F760F;
+    --green: #0F780F;
+    --checkbox-after: #D13639;
+    --checkboc-color: #E6E6E6;
+    --bd-google: #F2F2F2;
+
+    font-size: 62.5%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    width: 41.5rem;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--whitesmoke);
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-logo {
+    margin-top: 5.3rem;
+    width: 11rem;
+    margin-bottom: 5.3rem;
+}
+
+.title {
+    color: var(--tt-color);
+    font-weight: 600;
+    font-size: 2.1rem;
+    letter-spacing: -.1rem;
+
+    margin-bottom: 1.6rem;
+}
+
+.input-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    gap: 1.5rem;
+
+    padding: 0 5rem 0;
+    position: relative;
+}
+
+.input-wrapper {
+    width: 100%;
+}
+
+.input-wrapper input {
+    width: 100%;
+    max-width: 36.8rem;
+
+    background: var(--input-color);
+
+    font-weight: 600;
+    color: var(--tt-color);
+    font-size: 1.5rem;
+    outline-color: var(--tt-color);
+
+    border: none;
+    border-radius: .4rem;
+
+    padding: 2.1rem .9rem .8rem;
+
+    cursor: text;
+
+    transition: all 150ms ease-in-out;
+}
+
+.input-wrapper input:hover {
+    background: var(--input-color-hover);
+}
+
+.input-wrapper input:focus {
+    background: var(--whitesmoke);
+    outline: 3px solid var(--black);
+}
+
+.input-wrapper .login-label {
+    position: absolute;
+    color: var(--label-color);
+
+    font-size: 1.1rem;
+    letter-spacing: -.1rem;
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+    margin: 1.5rem 1.5rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+.input-wrapper .label-active {
+    margin: .6rem .6rem;
+    font-size: .9rem;
+}
+
+.login-icons {
+    display: flex;
+    margin-top: 3rem;
+    padding: 0 5rem 0;
+    gap: 1rem;
+    width: 100%;
+
+    margin-bottom: 1.5rem;
+}
+
+.login-icons .icons-button {
+    width: 25%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.4rem;
+
+    border: none;
+    outline: none;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.login-icons button:nth-child(1) img {
+    width: 1.6rem;
+    height: 1.6rem;
+   
+}
+
+.login-icons button:nth-child(2) img {
+    width: 1.6rem;
+    height: 1.6rem;
+    
+}
+
+.login-icons button:nth-child(3) img {
+    width: 1.5rem;
+    height: 1.9rem;
+   
+}
+
+.login-icons button:nth-child(4) img {
+    width: 1.8rem;
+    height: 1.7rem;
+    
+}
+
+.login-icons .icons-button:nth-child(1) {
+    border: 3px solid var(--blue-border);
+    background: var(--blue);
+}
+
+.login-icons .icons-button:nth-child(2) {
+    border: 3px solid var(--input-color);
+    background: var(--whitesmoke);
+}
+
+.login-icons .icons-button:nth-child(3) {
+    border: 3px solid var(--black);
+    background: var(--black);
+}
+
+.login-icons .icons-button:nth-child(4) {
+    border: 3px solid var(--green-border);
+    background: var(--green-border);
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+
+    cursor: pointer;
+    width: 100%;
+    padding: 0 5rem 0;
+
+    transition: all 200ms ease-in-out;
+}
+
+.checkbox-wrapper input {
+    width: 1.6rem;
+    height: 1.6rem;
+
+    appearance: none;
+    border-radius: .4rem;
+    background-color: var(--checkboc-color);
+    
+    cursor: pointer;
+}
+
+.checkbox-wrapper span {
+    font-size: 1.3rem;
+    color: var(--tt-color);
+    font-weight: 500;
+}
+
+.checkbox-wrapper input:checked {
+    background-color: var(--checkbox-after);
+}
+
+.checkbox-wrapper:hover input {
+    filter: contrast(0.8);
+
+}
+.checkbox-wrapper:hover span {
+    color: var(--tt-color-hover);
+}
+
+.checkbox-wrapper input:checked::after {
+    content: "";
+    display: block;
+    width: .4rem;
+    height: 1rem;
+    border: 3px solid var(--whitesmoke);
+    border-width: 0 .2rem .2rem 0;
+    transform: rotate(42deg);
+
+    margin-left: .6rem;
+}
+
+.confirm-login {
+    width: 100%;
+    width: 6.4rem;
+    height: 6.4rem;
+
+    border: none;
+    border-radius: 25%;
+    outline: none;
+
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--checkbox-after);
+
+    transition: all 100ms ease-in-out;
+
+    margin-bottom: 5rem;
+}
+
+.confirm-login path {
+    fill: var(--confirm-login-color-inside);
+}
+.confirm-login:hover,
+.confirm-login:focus {
+    background-color: var(--confirm-login-color-hover);
+}
+
+.confirm-login:disabled {
+    border: 3px solid #E8E8E8;
+    background-color: var(--whitesmoke);
+}
+
+.confirm-login:disabled path{
+    fill: #E8E8E8;
+}
+
+.log-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 4rem;
+}
+
+.login-link {
+    color: #ADB4C8;
+
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    color: #1F1F1F
+}
+
+
+.wallpaper {
+    width: 100%;
+    background-image: url("images/zed.jpg");
+    background-size: cover;
+
+    background-position: center;
+    flex: 1;
+}
+
+
+
